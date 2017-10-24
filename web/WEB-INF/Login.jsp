@@ -6,8 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sait" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="saitTag" tagdir="/WEB-INF/tags" %>
 <c:import url="/includes/header.html"/>
+<sait:debugHandler>
+	Remote Host: ${pageContext.request.remoteHost}<br />
+	Session ID: ${pageContext.session.id}
+</sait:debugHandler>
 <h1>Remember me login page</h1>
-<sait:login/>
+<saitTag:login/>
 <c:import url="/includes/footer.html"/>
